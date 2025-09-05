@@ -6,15 +6,7 @@ import re
 st.sidebar.title("Restaurant Menu Designer")
 st.sidebar.write("Choose a cuisine to generate a printable menu.")
 
-cuisine_bg_images = {
-    "Italian": "https://images.unsplash.com/photo-1551183053-bf91a1d81141",
-    "Chinese": "https://images.unsplash.com/photo-1585841773408-1146318370de",
-    "Mexican": "https://images.unsplash.com/photo-1565299715636-c6b817b07436",
-    "Indian": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8",
-    "French": "https://images.unsplash.com/photo-1511920183863-9b8f36214311",
-    "Japanese": "https://images.unsplash.com/photo-1569308027668-30948e5898d0",
-    "Mediterranean": "https://images.unsplash.com/photo-1600326145550-2defda9789f2"
-}
+
 DEFAULT_BG_IMAGE = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
 
 cuisine_options = list(cuisine_bg_images.keys())
@@ -200,17 +192,6 @@ def render_menu(name, items):
     
     st.markdown(full_html, unsafe_allow_html=True)
     
-# .menu-item {
-#             font-size: 1.18rem;
-#             color: #333;
-#             margin-bottom: 1.2em;
-#             padding-bottom: 0.8em;
-#             border-bottom: 1px dotted #e0c097;
-#             line-height: 1.6;
-#             text-align: left;
-#             width: 100%;
-#         }
-
 
 # --- 4. MAIN APP LOGIC ---
 if generate_button:
