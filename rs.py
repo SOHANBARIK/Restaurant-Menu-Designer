@@ -7,8 +7,6 @@ st.sidebar.title("Restaurant Menu Designer")
 st.sidebar.write("Choose a cuisine to generate a printable menu.")
 
 
-DEFAULT_BG_IMAGE = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
-
 cuisine_options = list(cuisine_bg_images.keys())
 cuisine_select = st.sidebar.selectbox("Pick a Cuisine", cuisine_options)
 cuisine_custom = st.sidebar.text_input("Or Enter a Custom Cuisine")
