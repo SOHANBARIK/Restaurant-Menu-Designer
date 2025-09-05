@@ -101,37 +101,3 @@ def generate_restaurant_name_and_items(cuisine):
 if __name__=="__main__":
     print(generate_restaurant_name_and_items("Chinese"))
 
-
-
-# # Use .invoke() to run the model
-# try:
-#     response = llm.invoke(prompt_)
-    
-#     # The response is an AIMessage object; its content is the answer string.
-#     capital_name = response.content
-#     print(capital_name)
-
-#     # If using in Streamlit, you would write it to the screen
-#     st.write(capital_name)
-
-# except Exception as e:
-#     print(f"An error occurred: {e}")
-#     st.error(f"An error occurred: {e}")
-
-# import datetime
-# today = datetime.date.today()
-# from langchain.agents import AgentType,initialize_agent,load_tools
-# from langchain.llms import OpenAI
-
-# tools= load_tools(["wikipedia","llm-math","date"],llm=llm)
-# agent=initialize_agent(
-#     tools,
-#     llm,
-#     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION# for instant answers
-# )
-# a=agent.run("When was Elon Musk born? What is his age right now in 2025?")
-# print(a)
-# b=agent.run("What's today's date? What day of the week is it?")
-# print(b)
-#st.write(b)
-
