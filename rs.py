@@ -229,7 +229,7 @@ else:
             <div class="menu-overlay">
                 <div class="menu-title">Restaurant Menu</div>
                 <div class="menu-section-title">Menu Items</div>
-                <div style="text-align:center; color:#bbb; margin-top:3cm;">
+                <div style="text-align:center; color:#555555; margin-top:3cm;">
                     <em>Select a cuisine and click 'Generate Menu' to see your menu here.</em>
                 </div>
                 <div class="restaurant-footer">Bon Appétit! | Powered by Sohan Barik</div>
