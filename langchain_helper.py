@@ -34,7 +34,7 @@ CUSTOM_HEADERS = {
 llm = ChatOpenAI(
     # 2. REQUIRED: Specify the model you want to use via OpenRouter
     # Example: "openai/gpt-3.5-turbo", "google/gemini-pro", "mistralai/mistral-7b-instruct"
-    model='openai/gpt-3.5-turbo', 
+    model='mistralai/mistral-7b-instruct:free', 
     
     # 3. Pass your OpenRouter API key
     openai_api_key=OPENROUTER_API_KEY,
