@@ -47,6 +47,7 @@ llm = ChatOpenAI(
     
     # You can still set other parameters
     temperature=0.6,
+    max_tokens=200
     
 )
 # THE ABOVE WAS SETUP CODE FOR YOUR LLM
