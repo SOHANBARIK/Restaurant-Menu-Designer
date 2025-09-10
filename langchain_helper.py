@@ -46,7 +46,8 @@ llm = ChatOpenAI(
     default_headers=CUSTOM_HEADERS,
     
     # You can still set other parameters
-    temperature=0.6
+    temperature=0.6,
+    max_tokens=200,
 )
 # THE ABOVE WAS SETUP CODE FOR YOUR LLM
 # name=llm("What is the capital of India?")
