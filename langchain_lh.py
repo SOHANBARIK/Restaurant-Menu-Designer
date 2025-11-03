@@ -17,7 +17,6 @@ load_dotenv()
 # so we can just pass the key.
 OPENROUTER_API_KEY = os.getenv("API_KEY")
 
-
 if not OPENROUTER_API_KEY:
     raise ValueError("API_KEY not found in environment variables.")
 
