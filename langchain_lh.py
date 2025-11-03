@@ -3,7 +3,7 @@ import streamlit as st # Included since you imported it
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI # Use ChatOpenAI from the correct package
 from langchain_core.messages import HumanMessage # Used to format the chat prompt
-from langchain_core import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chains import LLMChain # LLMChain is a chain that combines an LLM with a prompt template to create a single callable unit.
 from langchain.chains import SimpleSequentialChain
 from langchain.chains import SequentialChain
