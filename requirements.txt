@@ -1,7 +1,7 @@
-streamlit>=1.37.0
+streamlit
 python-dotenv
-openai>=1.37.0
+openai
 tiktoken
-langchain>=0.3.6
-langchain-core>=0.3.12
-langchain-openai>=0.2.3
+langchain
+langchain-core
+langchain-openai
