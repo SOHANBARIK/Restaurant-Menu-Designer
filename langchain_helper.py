@@ -34,7 +34,7 @@ CUSTOM_HEADERS = {
 llm = ChatOpenAI(
     # 2. REQUIRED: Specify the model you want to use via OpenRouter
     # Example: "openai/gpt-3.5-turbo", "google/gemini-pro", "mistralai/mistral-7b-instruct"
-    model='mistralai/mistral-7b-instruct:free', 
+    model='openai/gpt-3.5-turbo', 
     
     # 3. Pass your OpenRouter API key
     openai_api_key=OPENROUTER_API_KEY,
@@ -69,10 +69,10 @@ def generate_restaurant_name_and_items(cuisine):
     #Chain 1: Restaurant Name
     prompt_template_name= PromptTemplate( # it's a dictionary
         input_variables=['cuisine'],
-        template="I want to open a restaurant that serves {cuisine} food. Suggest a fancy name for this?"
+        template="I want to open a restaurant that serves {cuisine} food. Suggest only one fancy name for this? Provide only one answer"
     )
     p=prompt_template_name.format(cuisine="Indian")
-    # print(p)
+    print(p)
     # st.write(p)
 
     from langchain.chains import LLMChain # LLMChain is a chain that combines an LLM with a prompt template to create a single callable unit.
@@ -100,9 +100,4 @@ def generate_restaurant_name_and_items(cuisine):
     return response
 
 if __name__=="__main__":
-<<<<<<< HEAD
     print(generate_restaurant_name_and_items("Chinese"))
-
-=======
-    print(generate_restaurant_name_and_items("Chinese"))
->>>>>>> 2762d0e (did some changes)
