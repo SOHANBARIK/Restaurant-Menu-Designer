@@ -1,7 +1,6 @@
-streamlit
+streamlit>=1.36.0
 python-dotenv
-requests
-langchain
-langchain-core
-langchain-openai
-openai
+langchain>=0.2.11
+langchain-core>=0.2.23
+langchain-openai>=0.1.15
+openai>=1.37.0
