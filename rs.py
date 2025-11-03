@@ -1,5 +1,5 @@
 import streamlit as st
-import langchain_helper as lh
+import langchain_lh as lh
 import re
 
 # --- 1. SIDEBAR AND INPUT LOGIC ---
@@ -239,3 +239,82 @@ else:
         unsafe_allow_html=True
     )
 
+
+
+
+# # --- 3. MENU RENDERING FUNCTION ---
+# def render_menu(name, items):
+#     """Render menu items sequentially with numbers."""
+
+#     # Clean and validate items
+#     items = [item.strip() for item in items if item.strip()]
+
+#     # Build HTML for menu items with numbers starting at 1
+#     menu_items_html = "".join(
+#         f'<div class="menu-item">{i+1}. {item}</div>' 
+#         for i, item in enumerate(items)
+#     )
+
+#     # Update menu layout
+#     full_html = f"""
+#     <div class="a4-menu">
+#         <div class="menu-overlay">
+#             <div class="menu-title">{name}</div>
+#             <div class="menu-section-title">Menu Items</div>
+#             <div class="menu-items-container">
+#                 {menu_items_html}
+#             </div>
+#             <div class="restaurant-footer">Bon Appétit! | Powered by Sohan Barik</div>
+#         </div>
+#     </div>
+#     """
+
+#     # Add CSS for sequential layout
+#     st.markdown(
+#         """
+#         <style>
+#         .menu-items-container {
+#             width: 80%;
+#             margin: 0 auto;
+#             padding: 1em 2em;
+#         }
+#         .menu-item {
+#             font-size: 1.18rem;
+#             color: #333;
+#             margin-bottom: 1.2em;
+#             padding-bottom: 0.8em;
+#             border-bottom: 1px dotted #e0c097;
+#             line-height: 1.6;
+#             text-align: left;
+#             width: 100%;
+#             display: block;
+#         }
+#         </style>
+#         """,
+#         unsafe_allow_html=True
+#     )
+
+#     st.markdown(full_html, unsafe_allow_html=True)
+
+
+# # --- 4. MAIN APP LOGIC ---
+# if generate_button:
+#     if not selected_cuisine:
+#         st.sidebar.error("Please select or enter a cuisine.")
+#     else:
+#         with st.spinner(f"Creating a menu for a {selected_cuisine} restaurant..."):
+#             try:
+#                 response = lh.generate_restaurant_name_and_items(selected_cuisine)
+#                 st.write(response)  # 🔍 Debug: see full response
+
+#                 # Safely extract name
+#                 name = response.get('restaurant_name', 'Unnamed Restaurant').strip()
+
+#                 # Extract menu items
+#                 raw_items = response.get('menu_items', '').strip()
+#                 items = re.split(r'\d+\.\s*', raw_items)
+#                 items = [item.strip() for item in items if item.strip()]
+
+#                 render_menu(name, items)
+#             except Exception as e:
+                # st.error(f"An error occurred: {e}")
