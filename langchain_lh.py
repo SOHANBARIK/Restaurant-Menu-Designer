@@ -14,7 +14,9 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from langchain_core.prompts import PromptTemplate  # ✅ FIXED HERE
-from langchain.chains import LLMChain, SimpleSequentialChain, SequentialChain
+from langchain.chains.llm import LLMChain
+from langchain.chains.sequential import SimpleSequentialChain, SequentialChain
+
 
 
 # Load environment variables (like your OpenRouter API key)
